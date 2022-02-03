@@ -1,0 +1,19 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "hacemos un todo list con nodejs desde la terminal",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "todo",
+    "terminal",
+    "nodejs"
+  ],
+  "author": "jdiaz",
+  "license": "MIT",
+  "dependencies": {
+    "prompt": "^1.2.1"
+  }
+}
