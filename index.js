@@ -20,6 +20,11 @@ function start() {
   }
 
   prompt.get(schema, function (err, result) {
+    
+    if (err) {
+      console.log('ERROR PROMPT', err)
+    }
+
     const operation = parseInt(result.question)
 
     switch (operation) {
@@ -71,10 +76,10 @@ async function createTask () {
   start()
 }
 
-async function listTask () {
+function listTask () {
   console.log('... LISTA DE TAREAS ...') 
   
-  await getTask()
+  getTask()
 
   start()
 }
@@ -86,8 +91,8 @@ function getTask() {
   }
 }
 
-async function modifyTask () {
-  await getTask()
+function modifyTask () {
+  getTask()
 
   const finallyPromt = await prompt.get({ description: 'Que Tarea deseas finalizar?' })
 
